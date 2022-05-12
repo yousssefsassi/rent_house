@@ -1,1 +1,1 @@
-# rent_house
+# rent-house
