@@ -1,0 +1,50 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+   
+body{ 
+    padding-top: 30px;
+    padding-bottom: 30px;
+   }
+   header, footer{
+    width: 100%;
+    position: fixed; 
+    color: #fff;
+    height: 30px;
+   }
+   header{
+    background:burlywood ;
+    top: 0;
+   }
+   footer{
+    background:brown;
+    bottom: 0;
+   }
+   #edit_button{
+    color: #fff;
+    background-color: orange;
+    border-color: orange;
+   }
+   #delete_button{
+    background:red;
+    border-color:red ;
+    color: #fff;
+   }
+   #comments_button{
+    color: #fff;
+    background-color: green;
+    border-color: green;
+   }
+   #add_button{
+    color: #fff;
+    background-color: blue;
+    border-color: blue;
+   }
+   .button{
+    display:block;
+    width:100px;
+    line-height:20px;
+    text-align:center;
+    color:white;
+    text-decoration:none;
+   }
