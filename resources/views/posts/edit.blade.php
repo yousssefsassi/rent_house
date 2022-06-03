@@ -30,13 +30,13 @@
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Name:</strong>
-                <input type="text" name="name" class="form-control" placeholder="Name" value="{{ $post->name }}" >
+                <input type="text" name="name" class="form-control" placeholder="Name" value="{{$post->name }}" >
             </div>
             
             <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Localisation:</strong>
-                <input class="form-control"  name="localisation" placeholder="localisation" value="{{ old('localisation',$post->localisation) }}"></input>
+                <input class="form-control"  name="localisation" placeholder="localisation" value="{{ $post->localisation }}"></input>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
@@ -59,7 +59,8 @@
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Image:</strong>
-                <input type="file" name="image" class="form-control" placeholder="image">
+                <input type="file" name="image" class="form-control" placeholder="image" >
+                <img src="/images/{{ $post->image }}" width="100px">{{ $post->image }}</div>
             </div>
         </div>
             <div class="col-xs-12 col-sm-12 col-md-12 text-center">

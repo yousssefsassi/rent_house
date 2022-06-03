@@ -38,7 +38,7 @@
             <td>{{ $post->name }}</td>
             <td>{{ $post->localisation }}</td>
             <td>{{ $post->tlf }}</td>
-            <td>{{ $post->price }}</td>
+            <td>{{ $post->price }}DT</td>
             <td>{{ $post->descreption }}</td>
             
             <td>

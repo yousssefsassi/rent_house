@@ -65,7 +65,7 @@
           </div>
           <div class="col-md-6 mb-2">
             <div class="form-group mt-3">
-              <label class="pb-2" for="city">City</label>
+              <label class="pb-2" for="city">Ville</label>
               <select class="form-control form-select form-control-a" id="city">
                 <option> Ville disponible</option>
                 <option>Hammemet</option>
@@ -77,7 +77,7 @@
           </div>
           <div class="col-md-6 mb-2">
             <div class="form-group mt-3">
-              <label class="pb-2" for="bedrooms">Bedrooms</label>
+              <label class="pb-2" for="bedrooms">Chambres</label>
               <select class="form-control form-select form-control-a" id="bedrooms">
                 <option>choisir</option>
                 <option>01</option>
@@ -100,7 +100,7 @@
           </div>
           <div class="col-md-6 mb-2">
             <div class="form-group mt-3">
-              <label class="pb-2" for="bathrooms">Bathrooms</label>
+              <label class="pb-2" for="bathrooms">Salles de bain</label>
               <select class="form-control form-select form-control-a" id="bathrooms">
                 <option>choisir</option>
                 <option>01</option>

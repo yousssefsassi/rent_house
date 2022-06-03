@@ -21,6 +21,10 @@
                       {{ $posts->localisation }}
             </div>
             <div class="form-group">
+                <strong>Prix:</strong>
+                      {{ $posts->price }}DT
+            </div>
+            <div class="form-group">
                 <strong>Numéro téléphone:</strong>
                       {{ $posts->tlf }}
             </div>

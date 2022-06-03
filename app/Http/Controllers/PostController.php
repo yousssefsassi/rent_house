@@ -87,8 +87,11 @@ class PostController extends Controller
     public function edit($id)
     {
         
-            $post =Post::find($id);
-            return view('posts.edit',compact('post','id'));
+        {
+            $users =User::all();
+            $post=Post::find($id);
+            return view('posts.edit',compact('post','users'));
+        }
        
     
     }
@@ -100,24 +103,20 @@ class PostController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
-    {
-        $post =Post::find($id);
-        $request->validate([
-            'name' => 'required',
-            'descreption' => 'required',
-            'localisation'=>'required',
-            'price'=>'required',
-            'tlf'=>'required',
-           
-        ]);
-        $post->name=$request->name ;
-        $post->descreption=$request->descreption ;
-        $post->localisation=$request->localisation ;
-        $post->price=$request->price ;
-        $post->tlf=$request->tlf ;
-
-   
+  
+        public function update(Request $request, $id) {
+            $post =Post::find($id);
+            $this->validate($request, [
+                'name' => 'required',
+                'descreption' => 'required',
+                'localisation'=>'required',
+                'price'=>'required',
+                'tlf'=>'required',
+               
+            ]); 
+            $post->update($request->all());
+           return redirect()->route('Posts.index')->with('success','Post modifiée');
+            
         if ($image = $request->file('image')) {
             $destinationPath = 'images/';
             $profileImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
@@ -128,9 +127,7 @@ class PostController extends Controller
         }
            
       
-     
-        return redirect()->route('Posts.index')
-                        ->with('success','Article modifié avec succès');
+        return redirect()->route('Posts.index')->with('success','Post modifiée');
     }
 
     /**
